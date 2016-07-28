@@ -1,0 +1,3 @@
+<!-- BEGIN_INCLUDE(papers-trail:greet) -->
+    <papers-trail:greet config-ref="" friend="#[map-payload:friend]" />
+<!-- END_INCLUDE(papers-trail:greet) -->
