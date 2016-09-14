@@ -51,16 +51,12 @@ public class PaperTrailClient {
 
 	  }
 	  
-	  
-	  
 	  public List<SystemsListGetResponse> getSystemsList(String apiKey) {
 			// TODO Auto-generated method stub
 			 WebResource webResource = getApiResource().path("systems.json");
 			 
 			 String responseStirng=(String) getData(webResource,
 			    		SystemsListGetResponse.class, apiKey,"array");
-			   
-			  System.out.println("****************++++++++++++++++++++++"+responseStirng);
 			   
 			 return (List<SystemsListGetResponse>) getListObject(responseStirng, SystemsListGetResponse.class);
 		}
@@ -79,14 +75,7 @@ public class PaperTrailClient {
 		   
 		   return (List<UserListGetResponse>) getListObject(response, UserListGetResponse.class);
 		}
-	  
-	  
-	  
-	  
-	  
-	  
-	
-	  
+
 	  
 	  public SystemInfoGetResponse getSystemInformation(String apikey,
 				String systemName) {
@@ -108,10 +97,7 @@ public class PaperTrailClient {
 	  public AccountUsageGetResponse getAccountUsage(String apikey) {
 		 
 		  WebResource webResource = getApiResource().path("accounts.json");
-		   
-		  
-		   
-		   
+		    
 		   return (AccountUsageGetResponse)getData(webResource, AccountUsageGetResponse.class, apikey, "");
 		}
 
@@ -126,10 +112,6 @@ public class PaperTrailClient {
 			   
 			   return (List<GroupsGetResponse>) getListObject(response, GroupsGetResponse.class);
 		}
-	  
-	  
-	  
-	  
 
 		public List<DetsinationGetResponse> getDestinationList(String apiKey) {
 			 WebResource webResource = getApiResource().path("destinations.json");
@@ -179,13 +161,7 @@ public class PaperTrailClient {
 			    return (SearchGetResponse) getData(webResource,
 			    		SearchGetResponse.class, apikey,"");
 		}
-	  
-	  
-	  
-	  
-	  
-	  
-	  
+
 	  private Object getData(WebResource webResource, Class<?> returnClass,String token,String type) {
 
 		    WebResource.Builder builder = addHeader(webResource, token);
@@ -276,13 +252,6 @@ public class PaperTrailClient {
 		    return strResponse;
 		   
 		  }
-		  
-		  
-		
-		  
-		  
-		  
-		  
 
 		  private String convertObjectToString(Object request, ObjectMapper mapper) {
 		    String input = "";
@@ -345,7 +314,6 @@ public class PaperTrailClient {
 
 		  private Object buildResponseObject(Class<?> returnClass,
 			      ClientResponse clientResponse) {
-			  System.out.println("****************"+"noraml builder");
 			      StatusResponse statusResponse = null;
 			      if (clientResponse.getStatus() == 200) {
 			        statusResponse = (StatusResponse) clientResponse
@@ -366,29 +334,7 @@ public class PaperTrailClient {
 			      }
 			    
 			      return statusResponse;
-			     
+	
 			    }
-
-
-
-		
-
-
-
-		
-		
-
-
-
-
-
-
-
-
-		
-
-		
-
-		
 
 }
