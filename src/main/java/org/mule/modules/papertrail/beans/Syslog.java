@@ -14,8 +14,17 @@ public class Syslog {
 
     /** The hostname. */
     private String hostname;
+    private String description;
 
-    /**
+    public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	/**
      * Gets the port.
      *
      * @return the port

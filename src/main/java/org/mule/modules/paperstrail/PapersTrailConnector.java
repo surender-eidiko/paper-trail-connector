@@ -33,7 +33,7 @@ import org.mule.modules.papertrail.beans.UserListGetResponse;
 
 
 
-@Connector(name="papers-trail", friendlyName="PapersTrail")
+@Connector(name="paper-trail", friendlyName="paper-trail")
 public class PapersTrailConnector {
 
 	/** The config. */

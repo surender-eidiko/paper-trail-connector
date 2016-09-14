@@ -19,12 +19,7 @@ public class GetDestinationInfoTestCase extends PaperTrailAbstractTestCase{
 	@Category({FunctionalTestSuite.class})
 	public void getDestinationById()
 	{
-		
-	      
-	     
-			DetsinationGetResponse response=getConnector().getDestinationInfo(getApikey(),getDestinationId() );
-	      System.out.println("***************************************************"+response);
-	      assertNotNull(response);
-	     
+		DetsinationGetResponse response=getConnector().getDestinationInfo(getApikey(),getDestinationId() );
+		assertNotNull(response);
 	}
 }

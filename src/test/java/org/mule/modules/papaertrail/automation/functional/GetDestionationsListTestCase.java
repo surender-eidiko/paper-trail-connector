@@ -21,10 +21,7 @@ public class GetDestionationsListTestCase extends PaperTrailAbstractTestCase {
 	@Category({FunctionalTestSuite.class})
 	public void getDestinationList()
 	{
-		
 	      List<DetsinationGetResponse> response=getConnector().getDestinationList(getApikey());
-	      System.out.println("***************************************************"+response.get(0));
 	      assertNotNull(response);
-	     
 	}
 }
