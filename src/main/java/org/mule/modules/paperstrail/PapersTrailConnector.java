@@ -19,7 +19,6 @@ import org.mule.modules.papertrail.beans.SystemInfoGetResponse;
 import org.mule.modules.papertrail.beans.SystemsListGetResponse;
 import org.mule.modules.papertrail.beans.UserListGetResponse;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class PapersTrailConnector.
  */
